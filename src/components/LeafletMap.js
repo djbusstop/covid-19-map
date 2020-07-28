@@ -121,6 +121,9 @@ export class LeafletMap {
   handleWindowResize = () => {
     if (isMobile()) {
       this.map.invalidateSize();
+      this.layersControl.setPosition("bottomright");
+    } else {
+      this.layersControl.setPosition("topright");
     }
   };
 
